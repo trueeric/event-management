@@ -17,7 +17,7 @@ class EventController extends Controller
         // ori: return Event::all();
         //json 往上會多一層 data[]array
         // return EventResource::collection(Event::all());
-        return EventResource::collection(Event::with('user')->get());
+        return EventResource::collection(Event::with('user')->paginate());
 
     }
 
